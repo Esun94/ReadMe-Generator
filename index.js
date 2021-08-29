@@ -19,8 +19,29 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What type of license are you using?',
-        choices: ['Apache', 'MIT', 'BSD', 'IBM']
+        choices: ['Apache', 'MIT', 'BSD', 'IBM', 'NONE']
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter a valid Email Address'
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Please include a description',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Installation Instructions:'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Include Usage information:'
     }
+
 ];
 
 // TODO: Create a function to write README file

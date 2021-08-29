@@ -3,14 +3,14 @@
 function renderLicenseBadge(license) {
   if (license === "Apache") {
     return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-  };
-  if (license === "MIT") {
+  }
+  else if (license === "MIT") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-  };
-  if (license === "BSD") {
+  }
+  else if (license === "BSD") {
     return `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
-  };
-  if (license === "IBM") {
+  }
+  else if (license === "IBM") {
     return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
   }
 
@@ -22,21 +22,9 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license, github) {
+function renderLicenseSection(license) {
   if (license !== "None") {
-    return `Copyright 2021 ${github}
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
- 
-      http://www.apache.org/licenses/LICENSE-2.0
- 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.`
+    return ``
   }
 }
 
@@ -45,40 +33,61 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-Simple overview of use/purpose.
-
 ## Description
 
-A simple README.md Generator, users are to answer the inquirer prompt in command line, and upon comletion a README markdown file is generated from user input.
+${data.description}
 
-## Getting Started
+----
 
-### Dependencies
+## Table of Contents
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+1. [Description](#description)
 
-### Installing
+2. [Installation](#installation)
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+3. [Usage](#usage)
 
-### Executing program
+4. [Questions-Contact](#questions)
 
-* How to run the program
-* Step-by-step bullets
+5. [License](#license)
 
+----
+
+## Installation
+
+${data.installation}
+
+----
+
+## Usage
+${data.usage}
+
+----
+
+## Questions
+
+Contact me for additional questions
+
+Email: ${data.email}
+
+### GitHub UserName:
+
+${data.github}
+
+### GitHub Link
+
+https://github.com/${data.github}
+
+----
+
+# License
+
+${renderLicenseBadge(data.license)}\n
+${renderLicenseSection(data.license)}
 
 `;
 }
 
 module.exports = generateMarkdown;
 
-// # ${data.title}
-// ${renderLicenseBadge(data.license)}
 
-  
-// ##${data.title}
-
-// ${data.github}
-// ${renderLicenseSection(data.license, data.github)}
