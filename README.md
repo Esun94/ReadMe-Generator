@@ -1,9 +1,9 @@
 
-  # HELLO WORLD
+  # README.md Generator
 
 ## Description
 
-sladkfjasdf
+A simple README markdown generator using Node.js
 
 ----
 
@@ -23,12 +23,12 @@ sladkfjasdf
 
 ## Installation
 
-asdfasdf
+
 
 ----
 
 ## Usage
-asdfasdf
+
 
 ----
 
@@ -40,17 +40,17 @@ Email: ericmsun@gmail.com
 
 ### GitHub UserName:
 
-esun
+Esun94
 
 ### GitHub Link
 
-https://github.com/esun
+https://github.com/Esun94
 
 ----
 
 # License
 
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+undefined
 
 
 
